@@ -23,6 +23,7 @@ This project is a backend implementation for fetching and analyzing cryptocurren
   - Matic: `matic-network`
   - Ethereum: `ethereum`
 - The job runs every 2 hours and stores the data in a database.
+  
   ![image](https://github.com/user-attachments/assets/9120adbf-a355-483a-b04b-5139e786b2ec)
   ![image](https://github.com/user-attachments/assets/12f5ac92-4f3f-4611-a92a-a859a1caae1f)
 
