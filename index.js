@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import cron from 'node-cron';
 import axios from 'axios';
+import cryptoRoute from './routes/cryptoRoute.js';
 
 const app = express();
 app.use(express.json());
@@ -15,6 +16,7 @@ mongoose.connect(mongoURL).then(()=>{
     console.log(error);
 })
 
+app.use('/crypto', cryptoRoute);
 app.get('/', (req, res)=>{
     return res.status(200).send("Welcome to the backend");
 });
