@@ -35,6 +35,37 @@ async function fetchAndSaveCryptoData() {
     }
   }
 
-cron.schedule('0 */2 * * *', fetchAndSaveCryptoData);  
+cron.schedule('0 */2 * * *', fetchAndSaveCryptoData); 
+
+router.get('/stats', async (req, res) => {
+    const { coin } = req.query;
+  
+    if (!coin) {
+        return res.status(400).json({ error: 'Coin name is required' });
+      }
+
+    if (!COINS.includes(coin)) {
+      return res.status(400).json({ error: 'Invalid coin name' });
+    }
+  
+    try {
+      const latestRecord = await Crypto.findOne({ coin }).sort({ timestamp: -1 });
+  
+      if (!latestRecord) {
+        return res.status(404).json({ error: 'No data found for this coin' });
+      }
+  
+      res.json({
+        coin: latestRecord.coin,
+        price: latestRecord.price,
+        marketCap: latestRecord.marketCap,
+        '24hChange': latestRecord.change24h,
+        timestamp: latestRecord.timestamp,
+      });
+    } catch (error) {
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  });
+  
 
 export default router;
