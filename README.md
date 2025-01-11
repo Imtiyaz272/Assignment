@@ -34,6 +34,7 @@ This project is a backend implementation for fetching and analyzing cryptocurren
   {
     "coin": "bitcoin" 
   }
+  
   ![image](https://github.com/user-attachments/assets/9e93a0a8-015e-4864-ba74-bcbc78eeb43a)
 
 ### Task 2: API - `/deviation`
@@ -44,6 +45,7 @@ This project is a backend implementation for fetching and analyzing cryptocurren
   {
     "coin": "bitcoin" 
   }
+  
   ![image](https://github.com/user-attachments/assets/7e732055-3966-4286-9ba5-a011202f6213)
 
 
