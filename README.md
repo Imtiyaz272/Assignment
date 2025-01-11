@@ -23,6 +23,8 @@ This project is a backend implementation for fetching and analyzing cryptocurren
   - Matic: `matic-network`
   - Ethereum: `ethereum`
 - The job runs every 2 hours and stores the data in a database.
+  ![image](https://github.com/user-attachments/assets/9120adbf-a355-483a-b04b-5139e786b2ec)
+  ![image](https://github.com/user-attachments/assets/12f5ac92-4f3f-4611-a92a-a859a1caae1f)
 
 ### Task 2: API - `/stats`
 - Endpoint: `/stats`
@@ -30,32 +32,18 @@ This project is a backend implementation for fetching and analyzing cryptocurren
 - Query Params:
   ```json
   {
-    "coin": "bitcoin" // Can be one of the following: bitcoin, matic-network, ethereum
+    "coin": "bitcoin" 
   }
+  ![image](https://github.com/user-attachments/assets/9e93a0a8-015e-4864-ba74-bcbc78eeb43a)
 
-Sample Response:
-json
-Copy code
-{
-  "price": 40000,
-  "marketCap": 800000000,
-  "24hChange": 3.4
-}
-Task 3: API - /deviation
-Endpoint: /deviation
-Method: GET
-Query Params:
-json
-Copy code
-{
-  "coin": "bitcoin" // Can be one of the following: bitcoin, matic-network, ethereum
-}
-Functionality:
-Calculate the standard deviation of the price of the specified cryptocurrency for the last 100 records stored in the database.
-Sample Response:
-json
-Copy code
-{
-  "deviation": 4082.48
-}
-Setup Instructions
+### Task 2: API - `/deviation`
+- Endpoint: `/deviation`
+- Method: GET
+- Query Params:
+  ```json
+  {
+    "coin": "bitcoin" 
+  }
+  ![image](https://github.com/user-attachments/assets/7e732055-3966-4286-9ba5-a011202f6213)
+
+
